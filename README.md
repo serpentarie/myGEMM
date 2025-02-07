@@ -1,3 +1,20 @@
+YADRO WINTER SCHOOL 2025
+=============
+
+The code has been modified by removing CUDA dependencies and little bit optimizing parameters for precise performance measurements. Additionally, Python scripts have been added to automate experiments and data collection.
+
+## Requirements
+
+- OpenCL drivers, CMake, a C++ compiler, and Python 3
+
+## Automate Experiments:
+
+`tune_mygemm.py` allows to choose and adjust the parameters for experiments (different kernels, group sizes, and compiler options).
+
+```
+python3 tune_mygemm.multiple_run.py
+```
+This script runs the benchmark multiple times, collecting a larger sample size for more reliable results.
 
 Exploring the performance of SGEMM in OpenCL on NVIDIA GPUs
 =============
