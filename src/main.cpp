@@ -15,6 +15,7 @@
 
 // Common include
 #include "common.h"
+#include "settings.h"
 
 // Global variable with timing results
 profile_t timers[NUM_TIMERS];
@@ -26,8 +27,6 @@ profile_t timers[NUM_TIMERS];
 // respect to cuBLAS (the 'golden' reference).
 int main(int argc, char* argv[]) {
 
-    // Start of the function
-    printf("\n##\n");
     srand(time(NULL));
 
     // Compute the peak performance of the GPU
@@ -60,8 +59,6 @@ int main(int argc, char* argv[]) {
         const int k = size;
         const int m = size;
         const int n = size;
-        printf("##\n");
-        printf("## --- %dx%dx%d ---\n", k, m, n);
 
         // Allocate memory for the matrices and fill the inputs with random numbers
         float* A = (float*)malloc(m*k*sizeof(float*));
@@ -128,8 +125,7 @@ int main(int argc, char* argv[]) {
             double seconds = wtime(timers[c]);
             double performance = gflops(timers[c]);
             double fraction = 100.0 * performance / peak;
-            printf("## [%9s] %6.3lf s --> %6.1lf GFLOPS (%2.0lf%%), L2 norm: %.2e\n",
-                   name, seconds, performance, fraction, L2norm);
+            printf("%9s,%2d,%2d,%s,%d,%8.5f\n", name, KERNEL, TS, COMPILER_OPTIONS, k, seconds);
         }
 
         // Free up the matrices
@@ -140,7 +136,6 @@ int main(int argc, char* argv[]) {
     }
 
     // End of the program
-    printf("##\n");
     printf("\n");
     return 0;
 }
