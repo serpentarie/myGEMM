@@ -30,9 +30,9 @@ int main(int argc, char* argv[]) {
     srand(time(NULL));
 
     // Compute the peak performance of the GPU
-    double peak = GPU_CLOCK * GPU_CORES * GPU_MOD;
+//    double peak = GPU_CLOCK * GPU_CORES * GPU_MOD;
 
-    // Print information about the different configurations
+/*    // Print information about the different configurations
     printf("## --- Configurations ---\n");
     for (int c=0; c<=3; c++) {
         #ifndef ENABLE_CUDA
@@ -44,7 +44,7 @@ int main(int argc, char* argv[]) {
             case 2: printf("## myGEMM.cu on '%s', peak: %.1lf GFLOPS\n", GPU_NAME, peak); break;
             case 3: printf("## myGEMM.cl on '%s', peak: %.1lf GFLOPS\n", GPU_NAME, peak); break;
         }
-    }
+    }*/
 
     // Loop over the different input/output matrix sizes
     for (int size=MINSIZE; size<=MAXSIZE; size=size*2) {
@@ -113,18 +113,18 @@ int main(int argc, char* argv[]) {
                 case 3: myclblas(A, B, C, k, m, n, c); break;
             }
 
-            // Compare the result to the 'golden' reference output in terms of the L2-norm
+/*            // Compare the result to the 'golden' reference output in terms of the L2-norm
             double L2norm = 0.0;
             for (int i=0; i<m*n; i++) {
                 double val = C[i] - goldC[i];
                 L2norm += val*val;
             }
-            L2norm = sqrt(L2norm);
+            L2norm = sqrt(L2norm);*/
 
             // Print the results to screen
             double seconds = wtime(timers[c]);
-            double performance = gflops(timers[c]);
-            double fraction = 100.0 * performance / peak;
+//            double performance = gflops(timers[c]);
+//            double fraction = 100.0 * performance / peak;
             printf("%9s,%2d,%2d,%s,%d,%8.5f\n", name, KERNEL, TS, COMPILER_OPTIONS, k, seconds);
         }
 
