@@ -1,15 +1,7 @@
 
 // =================================================================================================
 // Project: 
-// Exploring the performance of general matrix-multiplication on an NVIDIA Tesla K40m GPU.
-//
-// File information:
-// Institution.... SURFsara <www.surfsara.nl>
-// Author......... Cedric Nugteren <cedric.nugteren@surfsara.nl>
-// Changed at..... 2014-11-17
-// License........ MIT license
-// Tab-size....... 4 spaces
-// Line length.... 100 characters
+// Exploring the performance of general matrix-multiplication on an AMD Radeon Vega 8
 //
 // =================================================================================================
 
@@ -35,10 +27,10 @@
 #define ALPHA 1.0f
 #define BETA 0.0f
 
-// Define the current GPU's parameters
-#define GPU_NAME "Tesla K40m"
-#define GPU_CLOCK 0.745 // Core clock in GHz
-#define GPU_CORES 2880 // Total number of CUDA cores
+// Defined the current GPU's parameters
+#define GPU_NAME "AMD Radeon Vega 8"
+#define GPU_CLOCK 1.9 // Core clock in GHz
+#define GPU_CORES 512 // Total number of CUDA cores
 #define GPU_MOD 2 // Fused multiply-add
 
 // OpenCL settings
