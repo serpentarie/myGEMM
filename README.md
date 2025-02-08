@@ -16,6 +16,33 @@ python3 tune_mygemm.multiple_run.py
 ```
 This script runs the benchmark multiple times, collecting a larger sample size for more reliable results.
 
+
+Results for my GPU(AMD Radeon Vega 8):
+=============
+Зависимость времени от work group size, matrix dimension = 1024
+![Зависимость времени от work group size, matrix dimension = 1024](amd_1024.png)
+Зависимость времени от work group size, matrix dimension = 2048
+![Зависимость времени от work group size, matrix dimension = 2048](amd_2048.png)
+Зависимость времени от work group size, matrix dimension = 4096
+![Зависимость времени от work group size, matrix dimension = 4096](amd_4096.png)
+Зависимость времени от matrix dimension
+
+![Зависимость времени от matrix dimension](amd_k.png)
+
+
+Results for StarFive(IMG BXE-4-32):
+=============
+Зависимость времени от work group size, matrix dimension = 1024
+![Зависимость времени от work group size, matrix dimension = 1024](starfive_512.png)
+Зависимость времени от work group size, matrix dimension = 2048
+![Зависимость времени от work group size, matrix dimension = 2048](starfive_1024.png)
+Зависимость времени от work group size, matrix dimension = 4096
+![Зависимость времени от work group size, matrix dimension = 4096](starfive_2048.png)
+Зависимость времени от matrix dimension
+
+![Зависимость времени от matrix dimension](starfive_k.png)
+
+
 Exploring the performance of SGEMM in OpenCL on NVIDIA GPUs
 =============
 
