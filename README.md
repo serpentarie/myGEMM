@@ -20,27 +20,27 @@ This script runs the benchmark multiple times, collecting a larger sample size f
 Results for my GPU(AMD Radeon Vega 8):
 =============
 Зависимость времени от work group size, matrix dimension = 1024
-![Зависимость времени от work group size, matrix dimension = 1024](amd_1024.png)
+![Зависимость времени от work group size, matrix dimension = 1024](graphics/amd_1024.png)
 Зависимость времени от work group size, matrix dimension = 2048
-![Зависимость времени от work group size, matrix dimension = 2048](amd_2048.png)
+![Зависимость времени от work group size, matrix dimension = 2048](graphics/amd_2048.png)
 Зависимость времени от work group size, matrix dimension = 4096
-![Зависимость времени от work group size, matrix dimension = 4096](amd_4096.png)
+![Зависимость времени от work group size, matrix dimension = 4096](graphics/amd_4096.png)
 Зависимость времени от matrix dimension
 
-![Зависимость времени от matrix dimension](amd_k.png)
+![Зависимость времени от matrix dimension](graphics/amd_k.png)
 
 
 Results for StarFive(IMG BXE-4-32):
 =============
 Зависимость времени от work group size, matrix dimension = 1024
-![Зависимость времени от work group size, matrix dimension = 1024](starfive_512.png)
+![Зависимость времени от work group size, matrix dimension = 1024](graphics/starfive_512.png)
 Зависимость времени от work group size, matrix dimension = 2048
-![Зависимость времени от work group size, matrix dimension = 2048](starfive_1024.png)
+![Зависимость времени от work group size, matrix dimension = 2048](graphics/starfive_1024.png)
 Зависимость времени от work group size, matrix dimension = 4096
-![Зависимость времени от work group size, matrix dimension = 4096](starfive_2048.png)
+![Зависимость времени от work group size, matrix dimension = 4096](graphics/starfive_2048.png)
 Зависимость времени от matrix dimension
 
-![Зависимость времени от matrix dimension](starfive_k.png)
+![Зависимость времени от matrix dimension](graphics/starfive_k.png)
 
 
 Exploring the performance of SGEMM in OpenCL on NVIDIA GPUs
